@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Register() {
   const [fullName, setFullName] = useState("");
@@ -7,6 +7,7 @@ function Register() {
   const [mobile, setMobile] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleRegister = () => {
     if (fullName.trim() === "") {
@@ -60,6 +61,7 @@ function Register() {
     setMobile("");
     setPassword("");
     setConfirmPassword("");
+    navigate("/login");
   };
 
   return (

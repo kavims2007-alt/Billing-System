@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function ForgotPassword() {
   const [email, setEmail] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
+  const navigate = useNavigate();
 
   const handleReset = () => {
     if (!email.trim()) {
@@ -37,6 +39,7 @@ function ForgotPassword() {
     setEmail("");
     setNewPassword("");
     setConfirmPassword("");
+    navigate("/login");
   };
 
   return (

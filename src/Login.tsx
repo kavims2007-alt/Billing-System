@@ -1,9 +1,10 @@
 import { FormEvent, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -32,6 +33,7 @@ function Login() {
 
     localStorage.setItem("loggedInUser", JSON.stringify(userData));
     alert("Login successful");
+    navigate("/dashboard");
   };
 
   return (
