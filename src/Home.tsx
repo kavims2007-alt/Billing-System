@@ -7,7 +7,7 @@ function Home() {
       <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
         <div className="container">
           <a className="navbar-brand fw-bold fs-3 text-primary" href="/">
-            💳 BillingPro
+            BillingPro
           </a>
 
           <button
@@ -121,8 +121,6 @@ function Home() {
 
             <div className="card shadow border-0 p-4">
 
-              <h1>👤</h1>
-
               <h4>Customers</h4>
 
               <p>
@@ -136,8 +134,6 @@ function Home() {
           <div className="col-md-3">
 
             <div className="card shadow border-0 p-4">
-
-              <h1>📦</h1>
 
               <h4>Products</h4>
 
@@ -153,8 +149,6 @@ function Home() {
 
             <div className="card shadow border-0 p-4">
 
-              <h1>🧾</h1>
-
               <h4>Invoices</h4>
 
               <p>
@@ -168,8 +162,6 @@ function Home() {
           <div className="col-md-3">
 
             <div className="card shadow border-0 p-4">
-
-              <h1>📊</h1>
 
               <h4>Reports</h4>
 
