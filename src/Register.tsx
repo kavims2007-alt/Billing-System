@@ -1,5 +1,12 @@
-import React, { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import { Link, useNavigate } from "react-router-dom";
+
+type User = {
+  fullName: string;
+  email: string;
+  mobile: string;
+  password: string;
+};
 
 function Register() {
   const [fullName, setFullName] = useState("");
@@ -38,9 +45,9 @@ function Register() {
       return;
     }
 
-    const storedUsers = JSON.parse(localStorage.getItem("registeredUsers") || "[]");
+    const storedUsers = JSON.parse(localStorage.getItem("registeredUsers") || "[]") as User[];
 
-    const userExists = storedUsers.some((user) => user.email === email.trim());
+    const userExists = storedUsers.some((user: User) => user.email === email.trim());
     if (userExists) {
       alert("An account with this email already exists");
       return;
@@ -124,7 +131,7 @@ function Register() {
   );
 }
 
-const styles = {
+const styles: Record<string, CSSProperties> = {
   container: {
     display: "flex",
     justifyContent: "center",

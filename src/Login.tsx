@@ -1,5 +1,11 @@
-import { FormEvent, useState } from "react";
+import { useState, type CSSProperties, type FormEvent } from "react";
 import { Link, useNavigate } from "react-router-dom";
+
+type User = {
+  fullName: string;
+  email: string;
+  password: string;
+};
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -14,9 +20,9 @@ function Login() {
       return;
     }
 
-    const registeredUsers = JSON.parse(localStorage.getItem("registeredUsers") || "[]");
+    const registeredUsers = JSON.parse(localStorage.getItem("registeredUsers") || "[]") as User[];
     const matchedUser = registeredUsers.find(
-      (user) => user.email === email.trim() && user.password === password
+      (user: User) => user.email === email.trim() && user.password === password
     );
 
     if (!matchedUser) {
@@ -76,7 +82,7 @@ function Login() {
   );
 }
 
-const styles = {
+const styles: Record<string, CSSProperties> = {
   container: {
     display: "flex",
     justifyContent: "center",
