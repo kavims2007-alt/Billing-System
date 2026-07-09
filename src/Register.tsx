@@ -9,6 +9,7 @@ function Register() {
   const [confirmPassword, setConfirmPassword] = useState("");
   const navigate = useNavigate();
 
+  
   const handleRegister = () => {
     if (fullName.trim() === "") {
       alert("Please enter Full Name");
