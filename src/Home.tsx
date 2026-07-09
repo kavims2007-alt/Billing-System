@@ -1,6 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import billingImage from "./assets/billing.png";
 function Home() {
+  const location = useLocation();
+  
   return (
     <>
       {/* Navbar */}
@@ -20,10 +22,6 @@ function Home() {
 
           <div className="collapse navbar-collapse" id="nav">
             <ul className="navbar-nav mx-auto">
-              <li className="nav-item">
-                <a className="nav-link" href="#">Home</a>
-              </li>
-
               <li className="nav-item">
                 <a className="nav-link" href="#">Features</a>
               </li>
