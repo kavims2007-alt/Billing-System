@@ -43,7 +43,17 @@ function Login() {
   };
 
   return (
-    <div style={styles.container}>
+    <>
+      {/* Navbar */}
+      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+        <div className="container">
+          <Link to="/" className="navbar-brand fw-bold fs-3 text-primary">
+            BillingPro
+          </Link>
+        </div>
+      </nav>
+
+      <div style={styles.container}>
       <div style={styles.box}>
         <h2>Billing Software</h2>
         <h3>User Login</h3>
@@ -78,7 +88,8 @@ function Login() {
           <Link to="/register">Register</Link>
         </p>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
 

@@ -16,6 +16,7 @@ type MoneyItem = {
   taxPercent: number;
 };
 
+
 type PurchaseItem = MoneyItem & {
   id: string;
   productName: string;
