@@ -1,0 +1,381 @@
+/* Suppliers (vendor) module styles — scoped under .suppliers-module so the
+   original look is preserved without leaking global element rules. Adapted from
+   my-frist-react-app/src/App.css. The module's own .app/.sidebar/.main layout
+   rules were dropped because the unified dashboard shell now provides them. */
+
+.suppliers-module {
+  font-family: "Segoe UI", sans-serif;
+  color: #1e293b;
+}
+
+.suppliers-module * {
+  box-sizing: border-box;
+}
+
+.suppliers-module .header {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.suppliers-module .header-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.suppliers-module .app-logo {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e0e7ff;
+  color: #2563eb;
+  border-radius: 12px;
+  font-size: 24px;
+}
+
+.suppliers-module .header h1 {
+  color: #1e293b;
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.suppliers-module .header p {
+  margin: 4px 0 0;
+  color: #64748b;
+}
+
+.suppliers-module .cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.suppliers-module .card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.suppliers-module .card h4 {
+  color: #64748b;
+  margin-bottom: 10px;
+}
+
+.suppliers-module .card h2 {
+  color: #1e293b;
+  margin: 0;
+}
+
+.suppliers-module .content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.suppliers-module .box {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.suppliers-module .supplier-form-box {
+  margin-bottom: 20px;
+}
+
+.suppliers-module .supplier-form {
+  display: grid;
+  gap: 16px;
+}
+
+.suppliers-module .form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.suppliers-module .form-row {
+  display: grid;
+  gap: 8px;
+}
+
+.suppliers-module .form-row label {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.suppliers-module .form-row input,
+.suppliers-module .form-row select {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+}
+
+.suppliers-module .form-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.suppliers-module .button-primary,
+.suppliers-module .button-secondary,
+.suppliers-module .button-table {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.suppliers-module .button-primary {
+  background: #2563eb;
+  color: white;
+}
+
+.suppliers-module .button-secondary {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.suppliers-module .button-table {
+  padding: 8px 14px;
+  font-size: 0.9rem;
+}
+
+.suppliers-module .dashboard-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.suppliers-module .dashboard-actions .button-primary {
+  width: 100%;
+  justify-content: center;
+  min-height: 50px;
+  font-size: 0.95rem;
+}
+
+.suppliers-module .button-edit {
+  background: #10b981;
+  color: white;
+}
+
+.suppliers-module .button-delete {
+  background: #ef4444;
+  color: white;
+}
+
+.suppliers-module .button-toggle {
+  background: #f59e0b;
+  color: white;
+  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.2);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.suppliers-module .button-toggle:hover {
+  background: #d97706;
+  transform: translateY(-1px);
+}
+
+.suppliers-module .back-button {
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 700;
+}
+
+.suppliers-module .supplier-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.suppliers-module .supplier-list-header label {
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.suppliers-module .supplier-list-header input {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.suppliers-module table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.suppliers-module table th {
+  background: #2563eb;
+  color: white;
+}
+
+.suppliers-module table th,
+.suppliers-module table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.suppliers-module .activity {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.suppliers-module .status-cell {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.suppliers-module .status-chip {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.suppliers-module .status-paid {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.suppliers-module .status-pending {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.suppliers-module .modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.suppliers-module .modal-content {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.2);
+  text-align: center;
+}
+
+.suppliers-module .modal-content h4 {
+  margin-bottom: 16px;
+}
+
+.suppliers-module .modal-content p {
+  margin-bottom: 24px;
+  color: #334155;
+}
+
+.suppliers-module .modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.suppliers-module .report-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 16px;
+}
+
+.suppliers-module .report-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.suppliers-module .report-card h4 {
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.suppliers-module .report-card p {
+  margin: 6px 0;
+  color: #475569;
+}
+
+.suppliers-module .small-chart {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.suppliers-module .chart-row {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  align-items: center;
+  gap: 12px;
+}
+
+.suppliers-module .chart-label {
+  color: #334155;
+  font-weight: 600;
+}
+
+.suppliers-module .bar-container {
+  background: #e2e8f0;
+  border-radius: 999px;
+  height: 12px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.suppliers-module .bar-fill {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.suppliers-module .bar-fill.paid {
+  background: #16a34a;
+}
+
+.suppliers-module .bar-fill.pending {
+  background: #dc2626;
+}
+
+.suppliers-module .chart-value {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+@media (max-width: 1000px) {
+  .suppliers-module .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .suppliers-module .content {
+    grid-template-columns: 1fr;
+  }
+
+  .suppliers-module .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .suppliers-module .report-grid {
+    grid-template-columns: 1fr;
+  }
+}
